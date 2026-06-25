@@ -1,10 +1,13 @@
 # Secrets
 gemini_key.json
+*.key
+*.pem
+config.json
+# The main config.json has API keys; never push it.
+# Per-seed configs at agentopia_runs/seed*/config.json also out of repo by location.
 
 # Local IDE / tool settings
 .claude/settings.local.json
-*.key
-*.pem
 
 # Python
 __pycache__/
@@ -17,3 +20,11 @@ build/
 
 # OS
 .DS_Store
+
+# Run outputs (large + per-machine)
+data/apartment_*/
+data/school_*/
+token_usage.jsonl
+run.log
+logs/
+*.pid
